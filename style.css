@@ -99,9 +99,19 @@ nav a {
 /* ---------- HERO ---------- */
 .hero {
   min-height: 100vh;
-  background:
+  /* background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    linear-gradient(#3a5f3a, #3a5f3a);
+    linear-gradient(#3a5f3a, #3a5f3a); */
+
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("hero_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -446,15 +456,6 @@ nav a {
   margin-bottom: 6px;
 }
 
-/* ===================================================== */
-/* ================= FOOTER ============================= */
-/* ===================================================== */
-footer {
-  background: var(--green-dark);
-  color: white;
-  text-align: center;
-  padding: 40px 10%;
-}
 
 /* ===================================================== */
 /* ================= DASHBOARD PAGE ==================== */

@@ -32,14 +32,13 @@ function runAIDecision() {
   const predictedCO2 = aiData.predictions[date];
   const threshold = aiData.decision_threshold;
 
-  const decision =
-    predictedCO2 >= threshold
-      ? "Operate Carbon Capture"
-      : "Do Not Operate";
+  // const decision =
+  //   predictedCO2 >= threshold
+  //     ? "Operate Carbon Capture"
+  //     : "Do Not Operate";
 
   resultBox.innerHTML = `
     <strong>Date:</strong> ${date}<br>
     <strong>Predicted CO₂:</strong> ${predictedCO2} ppm<br>
-    <strong>Decision:</strong> ${decision}
   `;
 }
