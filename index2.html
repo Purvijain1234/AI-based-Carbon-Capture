@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI-Based Carbon Capture</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+
+    <a href="index.html" class="logo">
+  <span class="logo-circle">
+    <img src="/logo1.png" alt="AI-Based Carbon Capture Logo">
+  </span>
+  <span class="logo-text">AI-Based Carbon Capture</span>
+</a>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#workflow">Workflow</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="nav-btn" href="ai_model.html">View Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div>
+    <h1>AI-Based Carbon Capture</h1>
+    <p>
+      Optimizing carbon capture operations using AI-driven time-window selection.
+      The system forecasts pollution patterns and operates capture systems only
+      when carbon removal is energy-efficient and effective.
+    </p>
+    <a href="#workflow"><button>View Workflow</button></a>
+    <button>Demo</button>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 120">
+    <path fill="#fbf8ee"
+      d="M0,80C120,100,240,120,360,110C480,100,600,60,720,50C840,40,960,60,1080,70C1200,80,1320,70,1440,60V120H0Z"/>
+  </svg>
+</div>
+
+<!-- Workflow -->
+<section class="workflow-section" id="workflow">
+
+  <h2>System Workflow</h2>
+  <p class="workflow-subtitle">
+    A continuous cycle of data collection, prediction, decision-making, and improvement.
+  </p>
+
+  <div class="workflow-container">
+
+    <div class="workflow-card">
+      <div class="icon-box purple"></div>
+    <a href="#data-layer">  <h3>Data Collection Layer</h3> </a>
+      <p>Real-time sensor data</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="workflow-card highlight">
+      <div class="icon-box teal"></div>
+      <a href="#prediction-layer">  <h3>Prediction Layer</h3> </a>
+      <p>LSTM forecasting</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="workflow-card">
+      <div class="icon-box purple"></div>
+      <a href="#decision-engine">  <h3>Decision Engine</h3> </a>
+      <p>Optimal time windows</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="workflow-card">
+      <div class="icon-box green"></div>
+      <a href="#maintenance">  <h3>Maintenance & Review</h3> </a>
+      <p>Continuous improvement</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Data Collection Layer -->
+<section class="data-layer-section" id="data-layer">
+  <h2>Data Collection Layer</h2>
+
+  <p class="data-layer-subtitle">
+    Collects real-time sensor data including CO₂ concentration, PM2.5 / PM10,
+    temperature, humidity, and wind speed. Data is stored and prepared for
+    forecasting future carbon trends.
+  </p>
+
+  <div class="data-card-container">
+    <div class="data-card">
+      <div class="data-badge">CO₂</div>
+      <p>CO₂ concentration</p>
+    </div>
+
+    <div class="data-card">
+      <div class="data-badge">PM</div>
+      <p>PM2.5 / PM10</p>
+    </div>
+
+    <div class="data-card">
+      <div class="data-badge">TH</div>
+      <p>Temperature and humidity</p>
+    </div>
+
+    <div class="data-card">
+      <div class="data-badge">WS</div>
+      <p>Wind speed</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- Prediction Layer -->
+<section class="prediction-layer-section" id="prediction-layer">
+  <h2>Prediction Layer – LSTM Model</h2>
+
+  <p class="prediction-layer-subtitle">
+    Core machine-learning component that performs EDA, feature engineering,
+    and time-series training using an LSTM model.
+  </p>
+
+  <div class="prediction-card-container">
+
+    <div class="prediction-card">
+      <h3>Data Sources</h3>
+      <ul>
+        <li>Real-time sensor data</li>
+        <li>Open datasets (CPCB / AQI)</li>
+      </ul>
+    </div>
+
+    <div class="prediction-card">
+      <h3>Model Pipeline</h3>
+      <ul>
+        <li>Exploratory data analysis</li>
+        <li>Feature engineering</li>
+        <li>Time-series LSTM training</li>
+      </ul>
+    </div>
+
+    <div class="prediction-card">
+      <h3>Forecast Output</h3>
+      <p>
+        Generates weekly carbon concentration trend forecasts,
+        similar to weather reports that show expected pollution
+        levels across time slots.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Decision Engine -->
+<section class="decision-engine-section" id="decision-engine">
+  <h2>Decision Engine</h2>
+
+  <p class="decision-engine-subtitle">
+    Acts as the brain of the system.
+  </p>
+
+  <div class="decision-card-container">
+
+    <!-- Inputs -->
+    <div class="decision-card">
+      <h3>Inputs</h3>
+      <ul>
+        <li>Forecasted CO₂ concentration</li>
+        <li>Energy-efficiency and cost thresholds</li>
+      </ul>
+    </div>
+
+    <!-- Decision Logic -->
+    <div class="decision-card">
+      <h3>Decision Logic</h3>
+
+      <div class="logic-box">
+        If CO₂ is high and efficiency is acceptable<br>
+        → Operate
+      </div>
+
+      <div class="logic-box">
+        Otherwise → Do not operate
+      </div>
+    </div>
+
+    <!-- Key Statement -->
+    <div class="decision-card highlight">
+      <p class="decision-quote">
+        AI does not capture carbon — it decides when capturing carbon makes sense.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Maintenance and Review -->
+<section class="maintenance-section" id="maintenance">
+  <h2>Maintenance & Review</h2>
+
+  <p class="maintenance-subtitle">
+    Tracks operational logs, system health, and compares expected versus actual performance.
+  </p>
+
+  <div class="maintenance-card-container">
+
+    <!-- Monitors -->
+    <div class="maintenance-card">
+      <h3>Monitors</h3>
+      <ul>
+        <li>Carbon captured per time slot</li>
+        <li>Energy used per time slot</li>
+        <li>Total operational cost</li>
+        <li>Machine health indicators</li>
+      </ul>
+    </div>
+
+    <!-- Detects -->
+    <div class="maintenance-card">
+      <h3>Detects</h3>
+      <ul>
+        <li>Efficiency drop</li>
+        <li>Filter cleaning needs</li>
+        <li>Solvent checks</li>
+        <li>Unnecessary start–stop cycles</li>
+      </ul>
+    </div>
+
+    <!-- Alerts -->
+    <div class="maintenance-card">
+      <h3>Alerts</h3>
+      <ul>
+        <li>Automated alerts (rule-based initially)</li>
+        <li>Prevents long-term efficiency loss</li>
+        <li>Improves future operating decisions</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  AI-Based Carbon Capture — Hackathon-Ready Research Prototype
+</footer>
+
+</body>
+
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</html>

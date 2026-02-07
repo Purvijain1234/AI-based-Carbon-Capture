@@ -1,0 +1,789 @@
+/* ============ ROOT & BASE ========== */
+:root {
+  --cream: #fbf8ee;
+  --green-dark: #2f4f2f;
+  --green: #3e6b3e;
+  --olive: #6b8e6b;
+  --card: #f6f1dd;
+  --text: #2c2c2c;
+  --bg1: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* logo */
+/* ================= LOGO (WHITE CIRCLE) ================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* White circular background */
+.logo-circle {
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image */
+.logo-circle img {
+  width: 45px;
+  height: auto;
+  display: block;
+}
+
+/* Text next to logo */
+.logo-text {
+  white-space: nowrap;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.nav-inner {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 22px;
+}
+
+nav a {
+  margin-left: 22px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-btn {
+  background: var(--cream);
+  color: var(--green-dark);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    linear-gradient(#3a5f3a, #3a5f3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 140px 10% 110px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  font-size: 15px;
+}
+
+.hero button {
+  background: var(--cream);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 24px;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+
+/* ---------- CURVE ---------- */
+.wave {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+}
+
+/* ===================================================== */
+/* ================= WORKFLOW SECTION ================== */
+/* ===================================================== */
+.workflow-section {
+  padding: 70px 8%;
+  background: var(--bg1);
+  text-align: center;
+}
+
+.workflow-section h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.workflow-subtitle {
+  max-width: 700px;
+  margin: 0 auto 32px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.workflow-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.workflow-card {
+  width: 200px;
+  background: var(--green-dark);
+  border-radius: 14px;
+  padding: 18px 16px;
+  border: 1px solid #3f6642;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.workflow-card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e8f3ec;
+  margin-bottom: 6px;
+}
+
+.workflow-card p {
+  font-size: 12px;
+  color: #cfe4d6;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #9ca3af;
+}
+
+.workflow-card a {
+  text-decoration: none;
+  color: inherit;        /* keeps text color same as card text */
+}
+
+.workflow-section {
+  margin-top: 20px;
+  margin-bottom: 40px; 
+}
+
+
+
+@media (max-width: 900px) {
+  .arrow {
+    display: none;
+  }
+}
+
+/* ===================================================== */
+/* ================= DATA COLLECTION =================== */
+/* ===================================================== */
+.data-layer-section {
+  padding: 70px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.data-layer-section h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.data-layer-subtitle {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.data-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.data-card {
+  background: var(--green-dark);
+  border-radius: 24px;
+  padding: 32px 24px;
+  border: 1px solid #3f6642;
+}
+
+.data-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dbe7ff, #e6f7f2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.data-card p {
+  font-size: 16px;
+  color: #e8f3ec;
+}
+
+/* ===================================================== */
+/* ================= PREDICTION LAYER ================== */
+/* ===================================================== */
+.prediction-layer-section {
+  padding: 70px 8%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.prediction-layer-section h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.prediction-layer-subtitle {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.prediction-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.prediction-card {
+  background: var(--green-dark);
+  border-radius: 24px;
+  padding: 32px 28px;
+  border: 1px solid #3f6642;
+  text-align: left;
+}
+
+.prediction-card h3 {
+  color: #e8f3ec;
+}
+
+.prediction-card li,
+.prediction-card p {
+  color: #cfe4d6;
+}
+
+/* ===================================================== */
+/* ================= DECISION ENGINE =================== */
+/* ===================================================== */
+.decision-engine-section {
+  padding: 70px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.decision-engine-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.decision-engine-subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 60px;
+}
+
+/* Cards layout */
+.decision-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* Green cards */
+.decision-card {
+  background: var(--green-dark);
+  border-radius: 24px;
+  padding: 36px 28px;
+  border: 1px solid #3f6642;
+  text-align: left;
+}
+
+.decision-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #e8f3ec;
+}
+
+.decision-card ul {
+  padding-left: 18px;
+}
+
+.decision-card li {
+  font-size: 15px;
+  color: #cfe4d6;
+  margin-bottom: 6px;
+}
+
+/* Decision logic boxes */
+.logic-box {
+  background: #355f3a;
+  border: 1px dashed #6fa37a;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #e8f3ec;
+}
+
+/* Highlight statement */
+.decision-card.highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.decision-quote {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #e8f3ec;
+}
+
+/* ===================================================== */
+/* ================= MAINTENANCE & REVIEW =============== */
+/* ===================================================== */
+.maintenance-section {
+  padding: 70px 8%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.maintenance-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.maintenance-subtitle {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Cards layout */
+.maintenance-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 50px;
+}
+
+/* Green cards */
+.maintenance-card {
+  background: var(--green-dark);
+  border-radius: 24px;
+  padding: 36px 28px;
+  border: 1px solid #3f6642;
+  text-align: left;
+}
+
+.maintenance-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #e8f3ec;
+}
+
+.maintenance-card ul {
+  padding-left: 18px;
+}
+
+.maintenance-card li {
+  font-size: 15px;
+  color: #cfe4d6;
+  margin-bottom: 6px;
+}
+
+/* ===================================================== */
+/* ================= FOOTER ============================= */
+/* ===================================================== */
+footer {
+  background: var(--green-dark);
+  color: white;
+  text-align: center;
+  padding: 40px 10%;
+}
+
+/* ===================================================== */
+/* ================= DASHBOARD PAGE ==================== */
+/* ===================================================== */
+
+/* Dashboard navbar */
+.dashboard-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--green-dark);
+  z-index: 100;
+  padding: 14px 0;
+}
+
+.dashboard-nav .nav-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.dashboard-nav a {
+  margin-left: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.dashboard-nav .nav-btn {
+  background: var(--cream);
+  color: var(--green-dark);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.dashboard-hero {
+  padding: 60px 8% 50px;   /* ⬅️ reduced from 140px */
+  text-align: center;
+  background: var(--bg1);
+}
+
+.dashboard-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.dashboard-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.dashboard-section {
+  padding: 50px 8% 70px;  /* ⬅️ slightly tightened */
+  background: #f9fafb;
+}
+
+.dashboard-card {
+  background: var(--green-dark);
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid #3f6642;
+}
+
+.dashboard-card iframe,
+.dashboard-placeholder {
+  width: 100%;
+  height: 80vh;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .dashboard-hero h1 {
+    font-size: 30px;
+  }
+
+  .dashboard-card iframe,
+  .dashboard-placeholder {
+    height: 65vh;
+  }
+}
+
+/* ===================================================== */
+/* ================= AI INTERFACE ====================== */
+/* ===================================================== */
+
+/* Input (date picker) */
+.ai-input {
+  width: 100%;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+/* Button */
+.ai-btn {
+  background: var(--cream);
+  color: var(--green-dark);
+  padding: 10px 22px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.ai-btn:hover {
+  opacity: 0.9;
+}
+
+/* Output box */
+.ai-result {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 15px;
+  color: #1f2937;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ===================================================== */
+/* ================= AI PAGE MOBILE ==================== */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  .ai-input {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .ai-btn {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .ai-result {
+    font-size: 14px;
+  }
+}
+
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* ---------- BASE ---------- */
+  body {
+    font-size: 14px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav {
+    top: 10px;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .nav-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  /* ---------- LOGO ---------- */
+  .logo {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .logo-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-circle img {
+    width: 22px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 120px 6% 90px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero button {
+    margin: 6px 4px;
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .workflow-section,
+  .data-layer-section,
+  .prediction-layer-section,
+  .decision-engine-section,
+  .maintenance-section {
+    padding: 60px 6%;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  /* ---------- WORKFLOW ---------- */
+  .workflow-container {
+    gap: 14px;
+  }
+
+  .workflow-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  /* ---------- DATA CARDS ---------- */
+  .data-card {
+    padding: 26px 20px;
+  }
+
+  .data-badge {
+    width: 54px;
+    height: 54px;
+    font-size: 14px;
+  }
+
+  /* ---------- PREDICTION / DECISION / MAINTENANCE ---------- */
+  .prediction-card,
+  .decision-card,
+  .maintenance-card {
+    padding: 26px 22px;
+  }
+
+  .prediction-card h3,
+  .decision-card h3,
+  .maintenance-card h3 {
+    font-size: 16px;
+  }
+
+  /* ---------- DASHBOARD ---------- */
+  .dashboard-hero {
+    padding: 50px 6% 40px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 30px;
+  }
+
+  .dashboard-section {
+    padding: 40px 6% 60px;
+  }
+
+  .dashboard-card iframe,
+  .dashboard-placeholder {
+    height: 60vh;
+  }
+
+  /* ---------- TABLE ---------- */
+  .ai-table th,
+  .ai-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 30px 6%;
+    font-size: 13px;
+  }
+}
+
+/* ===================================================== */
+/* ================= SMALL PHONES ====================== */
+/* ===================================================== */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-card iframe,
+  .dashboard-placeholder {
+    height: 55vh;
+  }
+}
